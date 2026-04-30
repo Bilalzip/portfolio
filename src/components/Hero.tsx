@@ -25,7 +25,7 @@ const NameBadge = () => {
             }}
           />
           <span className="absolute bottom-[40%] left-1/2 -translate-x-1/2 -rotate-90 whitespace-nowrap font-mono text-[6px] font-bold uppercase tracking-[0.2em] text-white/60 select-none">
-            codewithbilal.com
+            mdbilal.me
           </span>
         </div>
 

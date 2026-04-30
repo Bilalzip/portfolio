@@ -85,7 +85,7 @@ const Contact = () => {
             {[
               { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mohd-bilal-b9a0b71a8/" },
               { icon: Github, label: "GitHub", href: "https://github.com/bilalzip" },
-              { icon: Globe, label: "Portfolio", href: "https://codewithbilal.com/" },
+              { icon: Globe, label: "Portfolio", href: "https://mdbilal.me/" },
             ].map(({ icon: Icon, label, href }) => (
               <a
                 key={label}

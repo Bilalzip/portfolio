@@ -213,7 +213,7 @@ Used in:
 ## Current hardcoded items that must be replaced
 
 - Name references: `Mohd Bilal`, `mohd-bilal`, `mohdbilal`
-- Domain reference: `codewithbilal.com`
+- Domain reference: `mdbilal.me`
 - LinkedIn URL in `Hero.tsx` and `Contact.tsx`
 - GitHub URL in `Contact.tsx`
 - Resume filename and file path in `public/assets/resume/resume.pdf`
