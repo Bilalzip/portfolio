@@ -160,25 +160,25 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="max-w-2xl"
         >
-          <div className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1">
+          <div className="mb-5 flex flex-wrap items-center gap-x-2 gap-y-1">
             <MapPin className="w-4 h-4 text-cool" />
-            <span className="text-sm text-muted-foreground">{personalInfo.location}</span>
+            <span className="text-base text-muted-foreground">{personalInfo.location}</span>
             <span className="mx-1 hidden text-border sm:inline">|</span>
             <Award className="w-4 h-4 text-warm" />
             <span className="text-sm text-muted-foreground">2× AWS Certified</span>
           </div>
 
-          <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
+          <h1 className="mb-5 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[5.5rem]">
             <span className="text-gradient-warm">{personalInfo.name}</span>
           </h1>
 
-          <p className="mb-5 text-lg font-medium text-foreground/80 sm:text-xl md:mb-6 md:text-2xl">{personalInfo.role}</p>
+          <p className="mb-6 text-xl font-medium text-foreground/80 sm:text-2xl md:mb-7 md:text-3xl">{personalInfo.role}</p>
 
-          <p className="mb-7 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base md:mb-8">
+          <p className="mb-8 max-w-2xl text-base leading-relaxed text-white sm:text-lg md:mb-10 md:text-xl">
             {personalInfo.tagline}
           </p>
 
-          <div className="mb-7 md:mb-8">
+          <div className="mb-8 md:mb-10">
             <FloatingTech />
           </div>
 
