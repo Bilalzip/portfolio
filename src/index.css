@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes badge-sway {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3.5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 40 10% 90%;
+    --card: 220 16% 7%;
+    --card-foreground: 40 10% 90%;
+    --popover: 220 16% 7%;
+    --popover-foreground: 40 10% 90%;
+    --primary: 32 95% 55%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 12% 12%;
+    --secondary-foreground: 40 10% 90%;
+    --muted: 220 12% 10%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 200 70% 50%;
+    --accent-foreground: 220 20% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 12% 14%;
+    --input: 220 12% 12%;
+    --ring: 32 95% 55%;
+    --radius: 0.5rem;
+    --warm: 32 95% 55%;
+    --warm-muted: 32 40% 40%;
+    --cool: 200 70% 50%;
+    --cool-muted: 200 30% 35%;
+    --success: 160 60% 45%;
+    --lavender: 260 50% 60%;
+    --sidebar-background: 220 16% 7%;
+    --sidebar-foreground: 40 10% 90%;
+    --sidebar-primary: 32 95% 55%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 12% 12%;
+    --sidebar-accent-foreground: 40 10% 90%;
+    --sidebar-border: 220 12% 14%;
+    --sidebar-ring: 32 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .glass {
+    @apply bg-card/50 backdrop-blur-xl border border-border/40;
+  }
+  .glass-strong {
+    @apply bg-card/70 backdrop-blur-2xl border border-border/50;
+  }
+  .glow-warm {
+    box-shadow: 0 0 30px hsl(var(--warm) / 0.08), 0 0 60px hsl(var(--warm) / 0.03);
+  }
+  .glow-cool {
+    box-shadow: 0 0 30px hsl(var(--cool) / 0.08), 0 0 60px hsl(var(--cool) / 0.03);
+  }
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--warm)), hsl(var(--cool)));
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.15) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  .finder-window {
+    background: hsl(220 16% 7% / 0.95);
+    border: 1px solid hsl(var(--border) / 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .finder-sidebar {
+    background: hsl(220 16% 6% / 0.8);
+    border-right: 1px solid hsl(var(--border) / 0.4);
+  }
+  .badge-swing {
+    transform-origin: top center;
+    animation: badge-sway 6.5s ease-in-out infinite;
+    will-change: transform;
+  }
+  .badge-swing:hover {
+    animation-play-state: paused;
+  }
+}
